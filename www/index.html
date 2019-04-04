@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="js/jquery.mobile-1.4.5.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.5.js"></script>
+  
+  <script>
+      function calculator(){
+	    var number1=document.getElementById('num1').value;
+		var number2=document.getElementById('num2').value;
+		var oper=document.getElementById('operation').value;
+		
+		if(oper =='+'){
+	         document.getElementById('result').value=parseFloat(number1)+parseFloat(number2);
+			 }
+	    if(oper =='-'){
+	         document.getElementById('result').value=number1-number2;
+			 }
+		if(oper =='*'){
+	         document.getElementById('result').value=number1*number2;
+			 }
+		if(oper =='/'){
+	         document.getElementById('result').value=number1/number2;
+			 }
+	  } 
+  </script>
+  
+ </head>
+ 
+ <body>
+ 
+ <div data-role="page" id="pageone" data-theme="a">
+ 
+    <div data-role="header">	
+         <h1>Simple Calculator</h1>	
+	  <div data-role="navbar">	     
+		 <ul>
+		   <li><a href="#" data-icon="home">Home</a></li>
+		   <li><a href="#pagefour" data-icon="grid">Calculator</a></li>
+		   <li><a href="#pagethree" data-icon="info">Help</a></li>
+		 </ul>	  
+	  </div>
+
+    </div><!-- /header 1 -->
+ 
+    <div role="main" class="ui-content">
+       <p>This is a jQuery mobile exercise which provides the user with a calculator for basic mathematical operations</p>
+	</div>
+ 
+    <div data-role="footer">
+      <h2>Homework</h2>
+	</div>
+	
+ </div><!--end of page 1-->
+
+ <!--page 2 starts-->
+ <div data-role="page" data-dialog="true" id="pagetwo">
+   
+      <div data-role="header">
+	    <h1>More info</h1>
+	  </div>
+	 
+    
+      <div data-role="main" class="ui-content">
+         <p>You have requested more information about the App!</p>
+	     <a href="#pageone" class="ui-btn ui-icon-back ui-btn-icon-left">Dismiss</a>
+      </div>
+   
+      <div data-role="footer">
+      </div> 	  
+ </div>
+ 
+ <div data-role="page" id="pagethree">
+    
+	<div data-role="header">	
+         <h1>Simple Calculator</h1>	
+	  <div data-role="navbar">	     
+		 <ul>
+		   <li><a href="#pageone" data-icon="home">Home</a></li>
+		   <li><a href="#pagefour" data-icon="grid">Calculator</a></li>
+		   <li><a href="#pagethree" data-icon="info">Help</a></li>
+		 </ul>	  
+	  </div>
+    </div>
+ 
+      <div data-role="main" class="ui-content">
+         <p>This is the help section and provides basic information about how to use the calculator</p>
+      <a href="#pagetwo" class="ui-btn ui-icon-info ui-btn-icon-left">More info</a>
+	  </div>
+   
+      <div data-role="footer">
+	   <h2>Homework</h2>
+      </div> 	  
+ </div>
+ 
+ <div data-role="page" id="pagefour">
+    
+	<div data-role="header">	
+         <h1>Simple Calculator</h1>	
+	  <div data-role="navbar">	     
+		 <ul>
+		   <li><a href="#pageone" data-icon="home">Home</a></li>
+		   <li><a href="#pagefour" data-icon="grid">Calculator</a></li>
+		   <li><a href="#pagethree" data-icon="info">Help</a></li>
+		 </ul>	  
+	  </div>
+    </div>
+ 
+      <div data-role="main" class="ui-content">
+         <input type="text" id="num1"/>
+		 
+		 <select id="operation">
+		   <option value="+"> + </option>
+		   <option value="-"> - </option>
+		   <option value="*"> * </option>
+		   <option value="/"> / </option>
+		 </select>
+		 
+		 <input type="text" id="num2"/>
+          
+		 <button onclick="calculator();">Calculate</button>
+		 <p>Result is : </p>
+		 <input type="text" id="result"/>
+	  </div>
+   
+      <div data-role="footer">
+	   <h2>Homework</h2>
+      </div> 	  
+ </div>
+ 
+ <!--
+ <div data-role="page" id="pagefive">
+    
+	<div data-role="header">	
+         <h1>RESULTS</h1>	
+	  <div data-role="navbar">	     
+		 <ul>
+		   <li><a href="#pageone" data-icon="home">Home</a></li>
+		   <li><a href="#pagefour" data-icon="grid">Calculator</a></li>
+		   <li><a href="#pagethree" data-icon="info">Help</a></li>
+		 </ul>	  
+	  </div>
+    </div>
+ 
+      <div data-role="main" class="ui-content">
+         <p>Operation: </p>
+         <p>Results: </p>
+		 </br>
+		  <a href="#pageone" class="ui-btn ui-icon-back ui-btn-icon-left">Back</a>
+	  </div>
+   
+      <div data-role="footer">
+	   <h2>Homework</h2>
+      </div> 	  
+ </div> 
+ -->
+
+   
+</body>
+</html>
